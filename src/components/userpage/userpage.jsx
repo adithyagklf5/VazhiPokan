@@ -8,6 +8,8 @@ const Userpage = () => {
   const [apiData, setApiData] = useState([]);
   const { username } = useContext(AuthContext);
 
+
+
   useEffect(() => {
     getData();
   }, []);
@@ -32,7 +34,17 @@ const Userpage = () => {
       .catch((error) => {
         console.error("Error deleting blog:", error);
       });
+      
   };
+  const setData=(id,title,date,author,content)=>{
+    localStorage.setItem("ID",id);
+    localStorage.setItem("title",title);
+    localStorage.setItem("date",date);
+    localStorage.setItem("author",author);
+    localStorage.setItem("content",content);
+  
+  
+  }
 
   // Filter the blog posts based on the username
   const filteredData = apiData.filter((data) => data.author === username);
@@ -56,6 +68,7 @@ const Userpage = () => {
                           <Table.HeaderCell>Date</Table.HeaderCell>
                           <Table.HeaderCell>Author</Table.HeaderCell>
                           <Table.HeaderCell>Content</Table.HeaderCell>
+                          <Table.HeaderCell>Update</Table.HeaderCell>
                           <Table.HeaderCell>Delete</Table.HeaderCell>
                         </Table.Row>
                       </Table.Header>
@@ -67,6 +80,24 @@ const Userpage = () => {
                             <Table.Cell>{data.date}</Table.Cell>
                             <Table.Cell>{data.author}</Table.Cell>
                             <Table.Cell>{data.content}</Table.Cell>
+                            <Table.Cell>
+                              <Link to="/update">
+                                <Button
+                                  color="green"
+                                  onClick={() =>
+                                    setData(
+                                      data._id,
+                                      data.title,
+                                      data.date,
+                                      data.author,
+                                      data.content
+                                    )
+                                  }
+                                >
+                                  Update
+                                </Button>
+                              </Link>
+                            </Table.Cell>
                             <Table.Cell>
                               <Button
                                 color="red"

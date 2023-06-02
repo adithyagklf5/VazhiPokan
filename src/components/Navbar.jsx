@@ -6,6 +6,7 @@ import { AuthContext } from "./context/AuthContext";
 const Navbar = () => {
   const { isAuthenticated, isAdmin, logout } = useContext(AuthContext);
   const navigate = useNavigate(); // Access the navigate function
+  const { username } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout(); // Call the logout function from the AuthContext
@@ -49,6 +50,20 @@ const Navbar = () => {
               <li className="nav-item active">
                 <Link className="nav-link text-white navlnk" to="/userpage">
                   My blog
+                </Link>
+              </li>
+            )}
+            {isAuthenticated && !isAdmin && (
+              <li className="nav-item active">
+                <Link className="nav-link text-white navlnk">
+                  {username}
+                </Link>
+              </li>
+            )}
+            {isAuthenticated && isAdmin && (
+              <li className="nav-item active">
+                <Link className="nav-link text-white navlnk">
+                  {username}
                 </Link>
               </li>
             )}

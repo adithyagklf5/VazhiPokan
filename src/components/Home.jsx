@@ -41,6 +41,7 @@ const Home = () => {
                                     <h5 className="card-title">
                                       {data.author}
                                     </h5>
+                                    <h5 className="card-title">{data.date}</h5>
                                   </div>
                                 </div>
                               </div>
