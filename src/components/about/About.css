@@ -1,0 +1,45 @@
+.about {
+    background-image: url('https://live.staticflickr.com/8543/8612260159_84415d85aa_b.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .left {
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .btn2 {
+    background-color: orange;
+    border: none;
+    color:white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn2:hover {
+    background-color: white;
+  }

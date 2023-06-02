@@ -1,0 +1,35 @@
+.Background {
+    background-image: url("https://wallpaperaccess.com/full/2314950.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card-form {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.5); /* Translucent white background for input */
+   
+  }
+  

@@ -1,0 +1,30 @@
+.Background1 {
+    background-image: url("https://wallpapertag.com/wallpaper/full/a/f/5/141473-best-travel-background-2560x1600-for-ipad-pro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card-table {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-table:hover {
+    transform: scale(1.02); /* Scale up the card on hover */
+  }
+  
+  .card-header {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .card-text {
+    margin-bottom: 1rem;
+  }
+  
+  .card-text:hover {
+    background-color: #f5f5f5;
+  }
+  
